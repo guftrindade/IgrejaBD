@@ -1,4 +1,13 @@
 -- Página para cadastrar usuário
+/*
+declare @MensagemRetorno varchar(max)
+, @retorno int
+execute @retorno = IgrejaBD.dbo.AdicionarUsuario_Controlador
+	@p_nome = '', 
+	@p_dtaNascimento = '20210414', 
+	@p_cpf = null,
+	@p_MensagemRetorno=@MensagemRetorno output
+*/
 
 use IgrejaBD
 go
