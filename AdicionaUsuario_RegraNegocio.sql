@@ -17,6 +17,14 @@ if(len(isnull(@p_nome,''))=0)begin
 	set @MsgError = @MsgError + ' - Nome é de preenchimento obrigatório.'
 	set @retorno= @retorno + 1
 end 
+-- Caso tamanho do nome seja menor que 3 caracteres
+else if(len(@p_nome) <= 3)begin 
+	set @MsgError = @MsgError + ' - Nome deverá ser mairo que 3 caracteres.'
+	set @retorno= @retorno + 1
+
+end 
+
+
 
 
 -- @p_dtaNascimento
