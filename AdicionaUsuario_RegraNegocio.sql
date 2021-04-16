@@ -27,7 +27,12 @@ if(@p_dtaNascimento is null
 
 end 
 
--- @p_cpf
+-- Validação de CPF obrigatório
+if(isnull(@p_cpf,0) = 0 )begin 
+	set @MsgError = @MsgError + ' - CPF é de preenchimento obrigatório.'
+	set @retorno= @retorno + 1
+end 
+
 set @p_MensagemRetorno =  @MsgError
 
 -- igual à zero = ok
